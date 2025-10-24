@@ -130,14 +130,14 @@
                     </div>
                 </div>
                 <div class="bar" style="margin: 0px; width: 170px; padding: 0px 15px; cursor: pointer;">
-                    <div class="img-bar" id="ordenar" style="background: url(Images/ordernar-1.png) center/cover;"></div>
+                    <div class="img-bar" id="ordenar" style="background: url(assets/images/ordernar-1.png) center/cover;"></div>
                     Lançamento
-                    <div class="img-bar" id="seta-baixo" style="background: url(Images/seta-baixo-2.png) center/cover;"></div>
+                    <div class="img-bar" id="seta-baixo" style="background: url(assets/images/seta-baixo-2.png) center/cover;"></div>
                 </div>
             </div>
             <div class="right-section-bottom">
                 <div class="book-card" *ngFor="let livro of listaDeLivros">
-                    <div class="img-livro" [style.background]="'url(' + livro.imagemUrl + ') center/cover'"></div>
+                    <div class="img-livro" [style.background]="getSafeImageUrl(livro.imagemUrl)"></div>
                     <h2>{{ livro.titulo }}</h2>
                     <h3>{{ livro.genero }}</h3>
                     <div class="avaliacao-livro">
