@@ -12,21 +12,21 @@
                     <div class="label-container">
                         <label for="nome">
                             Nome
-                            <input type="text" id="nome" class="inp">
+                            <input type_="" id="nome" class="inp" [(ngModel)]="nome" name="nome">
                         </label>
                         <label for="sobrenome">
                             Sobrenome
-                            <input type="text" id="sobrenome" class="inp">
+                            <input type_="" id="sobrenome" class="inp" [(ngModel)]="sobrenome" name="sobrenome">
                         </label>
                     </div>
                     <label for="email" id="label-email">
                         Email
-                        <input type="email" id="email" class="inp" placeholder="email@email.com">
+                        <input type_="" id="email" class="inp" placeholder="email@email.com" [(ngModel)]="email" name="email">
                     </label>
                     <div class="label-container">
                         <label for="senha">
                             Senha
-                            <input [type]="tipoInputSenha" id="senha" class="inp">
+                            <input [type]="tipoInputSenha" id="senha" class="inp" [(ngModel)]="senha" name="senha">
                             <div id="visualizar" (click)="toggleSenha()" [class.visivel]="senhaVisivel"></div>
                         </label>
                         <label for="confirmar" id="label-confirmar">
