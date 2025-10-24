@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+/* src/styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    /* Vamos usar o fundo padrão do seu app */
+    background-color: #fffbf3;
+    font-family: inter;
+    /* O Angular já cuida do 'display: flex' de outra forma,
+       mas podemos adicionar isso se necessário depois. */
+}

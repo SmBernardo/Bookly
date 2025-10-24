@@ -1,0 +1,47 @@
+<div id="box">
+        <main>
+            <section id="image-section">
+                <div class="logo-box"></div>
+                <h2>bookly</h2>
+            </section>
+            <section id="login-section">
+                <h1>Bem vindo ao Bookly!</h1>
+                <p>Para começar a explorar o nosso catálogo é preciso se cadastrar.</p>
+
+                <div id="login">
+                    <div class="label-container">
+                        <label for="nome">
+                            Nome
+                            <input type="text" id="nome" class="inp">
+                        </label>
+                        <label for="sobrenome">
+                            Sobrenome
+                            <input type="text" id="sobrenome" class="inp">
+                        </label>
+                    </div>
+                    <label for="email" id="label-email">
+                        Email
+                        <input type="email" id="email" class="inp" placeholder="email@email.com">
+                    </label>
+                    <div class="label-container">
+                        <label for="senha">
+                            Senha
+                            <input [type]="tipoInputSenha" id="senha" class="inp">
+                            <div id="visualizar" (click)="toggleSenha()" [class.visivel]="senhaVisivel"></div>
+                        </label>
+                        <label for="confirmar" id="label-confirmar">
+                            Confirmar senha
+                            <input type="password" id="confirmar" class="inp">
+                        </label>
+                    </div>
+                    <label for="termos" id="label-termos">
+                        <input type="checkbox" name="termos" id="termos">
+                        Eu li e concordo com os termos de uso.
+                    </label>
+                </div>
+
+                <button id="criar" (click)="criarConta()">Criar conta</button>
+                <p style="margin-top: 15px;">Já possui uma conta? <a routerLink="/login">Entre</a></p>
+            </section>
+        </main>
+    </div>

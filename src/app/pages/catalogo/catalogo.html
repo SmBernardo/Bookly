@@ -1,0 +1,333 @@
+<header>
+        <div class="logo-container">
+            <div class="logo"></div>
+            <h1>Bookly</h1>
+        </div>
+
+        <div class="bar">
+            <button id="menu">
+                <div id="img-cardapio"></div>
+                Menu
+                <div id="img-divisa"></div>
+            </button>
+            <input type="text" id="search" placeholder="pesquisar no catálogo">
+            <button id="button-search">
+                <div id="img-search"></div>
+            </button>
+        </div>
+
+        <div class="button-container">
+            <button id="btn-favoritos">
+                <div id="img-favoritos"></div>
+            </button>
+            <button id="btn-carrinho">
+                <div id="img-carrinho"></div>
+            </button>
+            <button id="btn-conta">
+                <div id="img-conta"></div>
+            </button>
+        </div>
+        <button id="btn-ajuda">
+            Acessibilidade
+            <span>•</span>
+            <div id="img-ajuda"></div>
+            Ajuda
+        </button>
+    </header>
+
+    <div class="menu-nav">
+        <nav>
+            <p><span style="color: #6E9E9D;"><a routerLink="/" style="color: #6E9E9D;">Iníco</a> /</span> <a href="#">Livros</a></p>
+        </nav>
+        <h2>Filtros</h2>
+    </div>
+
+    <main>
+
+        <section class="left-section">
+            <div class="filtro">
+                <div class="menu-filtro">
+                    Livros
+                    <div class="img-menu-filtro"></div>
+                </div>
+                <div class="conteudo-filtro">
+                    <a href="#">+ Mais vendidos<span>(204)</span></a>
+                    <a href="#">+ Livros em oferta<span>(107)</span></a>
+                    <a href="#">+ Lançamentos<span>(30)</span></a>
+                    <a href="#">+ Destaques<span>(123)</span></a>
+                    <a href="#">+ Mais famosos<span>(83)</span></a>
+                </div>
+                <div class="ver-todos">
+                    <p>Ver todos</p>
+                    <div class="img-ver-todos"></div>
+                </div>
+            </div>
+            <div class="filtro">
+                <div class="menu-filtro">
+                    Editoras
+                    <div class="img-menu-filtro"></div>
+                </div>
+                <div class="conteudo-filtro">
+                    <a href="#">+ Mais vendidos<span>(204)</span></a>
+                    <a href="#">+ Livros em oferta<span>(204)</span></a>
+                    <a href="#">+ Lançamentos<span>(204)</span></a>
+                    <a href="#">+ Destaques<span>(204)</span></a>
+                    <a href="#">+ Mais famosos<span>(204)</span></a>
+                </div>
+                <div class="ver-todos">
+                    <p>Ver todos</p>
+                    <div class="img-ver-todos"></div>
+                </div>
+            </div>
+            <div class="filtro">
+                <div class="menu-filtro">
+                    Ano de publicação
+                    <div class="img-menu-filtro"></div>
+                </div>
+                <div class="conteudo-filtro">
+                    <a href="#">+ Mais vendidos<span>(204)</span></a>
+                    <a href="#">+ Livros em oferta<span>(204)</span></a>
+                    <a href="#">+ Lançamentos<span>(204)</span></a>
+                    <a href="#">+ Destaques<span>(204)</span></a>
+                    <a href="#">+ Mais famosos<span>(204)</span></a>
+                </div>
+                <div class="ver-todos">
+                    <p>Ver todos</p>
+                    <div class="img-ver-todos"></div>
+                </div>
+            </div>
+            <div class="filtro">
+                <div class="menu-filtro">
+                    Categorias
+                    <div class="img-menu-filtro"></div>
+                </div>
+                <div class="conteudo-filtro">
+                    <a href="#">+ Mais vendidos<span>(204)</span></a>
+                    <a href="#">+ Livros em oferta<span>(204)</span></a>
+                    <a href="#">+ Lançamentos<span>(204)</span></a>
+                    <a href="#">+ Destaques<span>(204)</span></a>
+                    <a href="#">+ Mais famosos<span>(204)</span></a>
+                </div>
+                <div class="ver-todos">
+                    <p>Ver todos</p>
+                    <div class="img-ver-todos"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="right-section">
+            <div class="right-section-top">
+                <div class="bar" style="margin: 0px; width: 794px;">
+                    <div class="left-bar">
+                        <a href="#" style="color: #2C2C2C;">Recentes</a>
+                        <a href="#">Esse ano</a>
+                        <a href="#">Principais</a>
+                    </div>
+                    <div class="right-bar">
+                        <div class="img-bar" id="menu-1"></div>
+                        <div class="img-bar" id="menu-2"></div>
+                        <div class="img-bar" id="menu-3"></div>
+                    </div>
+                </div>
+                <div class="bar" style="margin: 0px; width: 170px; padding: 0px 15px; cursor: pointer;">
+                    <div class="img-bar" id="ordenar" style="background: url(Images/ordernar-1.png) center/cover;"></div>
+                    Lançamento
+                    <div class="img-bar" id="seta-baixo" style="background: url(Images/seta-baixo-2.png) center/cover;"></div>
+                </div>
+            </div>
+            <div class="right-section-bottom">
+                <div class="book-card">
+                    <div class="img-livro" style="background: url(assets/Images/capas/castelo-animado.png) center/cover;"></div>
+                    <h2>O Castelo Animado</h2>
+                    <h3>Fantasia, Aventura</h3>
+                    <div class="avaliacao-livro">
+                        <div class="avaliado"></div>
+                        <div class="avaliado"></div>
+                        <div class="avaliado"></div>
+                        <div class="avaliado"></div>
+                        <div class="nao-avaliado"></div>
+                    </div>
+                </div>
+                <div class="book-card">
+                    <div class="img-livro" style="background: url(assets/Images/capas/o-que-tem-na-geladeira.png) center/cover;"></div>
+                    <h2>O Que Tem na Geladeira?</h2>
+                    <h3>Gastronomia</h3>
+                    <div class="avaliacao-livro">
+                        <div class="avaliado"></div>
+                        <div class="avaliado"></div>
+                        <div class="avaliado"></div>
+                        <div class="avaliado"></div>
+                        <div class="nao-avaliado"></div>
+                    </div>
+                </div>
+                <div class="book-card">
+                    <div class="img-livro" style="background: url(assets/Images/capas/assim-que-comeca.png) center/cover;"></div>
+                    <h2>É Assim que Começa</h2>
+                    <h3>Romance</h3>
+                    <div class="avaliacao-livro">
+                        <div class="avaliado"></div>
+                        <div class="avaliado"></div>
+                        <div class="avaliado"></div>
+                        <div class="avaliado"></div>
+                        <div class="nao-avaliado"></div>
+                    </div>
+                </div>
+                <div class="book-card">
+                    <div class="img-livro" style="background: url(assets/Images/capas/always-you.png) center/cover;"></div>
+                    <h2>Alway You</h2>
+                    <h3>Romance</h3>
+                    <div class="avaliacao-livro">
+                        <div class="avaliado"></div>
+                        <div class="avaliado"></div>
+                        <div class="avaliado"></div>
+                        <div class="avaliado"></div>
+                        <div class="nao-avaliado"></div>
+                    </div>
+                </div>
+                <div class="book-card">
+                    <div class="img-livro" style="background: url(assets/Images/capas/pequeno-principe.png) center/cover;"></div>
+                    <h2>O Pequeno Príncipe</h2>
+                    <h3>Fantasia, Infantil</h3>
+                    <div class="avaliacao-livro">
+                        <div class="avaliado"></div>
+                        <div class="avaliado"></div>
+                        <div class="avaliado"></div>
+                        <div class="avaliado"></div>
+                        <div class="avaliado"></div>
+                    </div>
+                </div>
+                <div class="book-card">
+                    <div class="img-livro" style="background: url(assets/Images/capas/cronicas-de-duna.png) center/cover;"></div>
+                    <h2>Duna (Crônicas de Duna Livro 1)</h2>
+                    <h3>Fantasia, Ficção</h3>
+                    <div class="avaliacao-livro">
+                        <div class="avaliado"></div>
+                        <div class="avaliado"></div>
+                        <div class="avaliado"></div>
+                        <div class="avaliado"></div>
+                        <div class="avaliado"></div>
+                    </div>
+                </div>
+                <div class="book-card">
+                    <div class="img-livro" style="background: url(assets/Images/capas/harry-potter-pedra-filosofal.png) center/cover;"></div>
+                    <h2>Harry Potter e a Pedra Filosofal</h2>
+                    <h3>Fantasia, Aventura</h3>
+                    <div class="avaliacao-livro">
+                        <div class="avaliado"></div>
+                        <div class="avaliado"></div>
+                        <div class="avaliado"></div>
+                        <div class="avaliado"></div>
+                        <div class="avaliado"></div>
+                    </div>
+                </div>
+                <div class="book-card">
+                    <div class="img-livro" style="background: url(assets/Images/capas/diario-perdido-gravity-falls.png) center/cover;"></div>
+                    <h2>O Diário Perdido de Gravity Falls</h2>
+                    <h3>Fantasia, Ficção</h3>
+                    <div class="avaliacao-livro">
+                        <div class="avaliado"></div>
+                        <div class="avaliado"></div>
+                        <div class="avaliado"></div>
+                        <div class="avaliado"></div>
+                        <div class="avaliado"></div>
+                    </div>
+                </div>
+                <div class="book-card">
+                    <div class="img-livro"></div>
+                    <h2>O Castelo Animado</h2>
+                    <h3>Fantasia, Aventura</h3>
+                    <div class="avaliacao-livro">
+                        <div class="avaliado"></div>
+                        <div class="avaliado"></div>
+                        <div class="avaliado"></div>
+                        <div class="avaliado"></div>
+                        <div class="nao-avaliado"></div>
+                    </div>
+                </div>
+                <div class="book-card">
+                    <div class="img-livro"></div>
+                    <h2>O Castelo Animado</h2>
+                    <h3>Fantasia, Aventura</h3>
+                    <div class="avaliacao-livro">
+                        <div class="avaliado"></div>
+                        <div class="avaliado"></div>
+                        <div class="avaliado"></div>
+                        <div class="avaliado"></div>
+                        <div class="nao-avaliado"></div>
+                    </div>
+                </div>
+                <div class="book-card">
+                    <div class="img-livro"></div>
+                    <h2>O Castelo Animado</h2>
+                    <h3>Fantasia, Aventura</h3>
+                    <div class="avaliacao-livro">
+                        <div class="avaliado"></div>
+                        <div class="avaliado"></div>
+                        <div class="avaliado"></div>
+                        <div class="avaliado"></div>
+                        <div class="nao-avaliado"></div>
+                    </div>
+                </div>
+                <div class="book-card">
+                    <div class="img-livro"></div>
+                    <h2>O Castelo Animado</h2>
+                    <h3>Fantasia, Aventura</h3>
+                    <div class="avaliacao-livro">
+                        <div class="avaliado"></div>
+                        <div class="avaliado"></div>
+                        <div class="avaliado"></div>
+                        <div class="avaliado"></div>
+                        <div class="nao-avaliado"></div>
+                    </div>
+                </div>
+                <div class="book-card">
+                    <div class="img-livro"></div>
+                    <h2>O Castelo Animado</h2>
+                    <h3>Fantasia, Aventura</h3>
+                    <div class="avaliacao-livro">
+                        <div class="avaliado"></div>
+                        <div class="avaliado"></div>
+                        <div class="avaliado"></div>
+                        <div class="avaliado"></div>
+                        <div class="nao-avaliado"></div>
+                    </div>
+                </div>
+                <div class="book-card">
+                    <div class="img-livro"></div>
+                    <h2>O Castelo Animado</h2>
+                    <h3>Fantasia, Aventura</h3>
+                    <div class="avaliacao-livro">
+                        <div class="avaliado"></div>
+                        <div class="avaliado"></div>
+                        <div class="avaliado"></div>
+                        <div class="avaliado"></div>
+                        <div class="nao-avaliado"></div>
+                    </div>
+                </div>
+                <div class="book-card">
+                    <div class="img-livro"></div>
+                    <h2>O Castelo Animado</h2>
+                    <h3>Fantasia, Aventura</h3>
+                    <div class="avaliacao-livro">
+                        <div class="avaliado"></div>
+                        <div class="avaliado"></div>
+                        <div class="avaliado"></div>
+                        <div class="avaliado"></div>
+                        <div class="nao-avaliado"></div>
+                    </div>
+                </div>
+                <div class="book-card">
+                    <div class="img-livro"></div>
+                    <h2>O Castelo Animado</h2>
+                    <h3>Fantasia, Aventura</h3>
+                    <div class="avaliacao-livro">
+                        <div class="avaliado"></div>
+                        <div class="avaliado"></div>
+                        <div class="avaliado"></div>
+                        <div class="avaliado"></div>
+                        <div class="nao-avaliado"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>

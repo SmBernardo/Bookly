@@ -1,0 +1,429 @@
+@charset "UTF-8";
+
+header {
+    background-color: #fffbf3;
+    width: calc(100% - 70px);
+    height: 120px;
+    border-bottom: 1px solid rgb(221, 221, 221);
+    padding: 0px 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    background: url(../../../assets/Images/bookly-logo.png) center/cover;
+}
+
+.bar {
+    background-color: #E4DCCF;
+    width: 682px;
+    height: 48px;
+    margin: 35px 0px;
+    border-radius: 10px;
+    display: flex;
+    border: 1px solid rgb(206, 206, 206);
+}
+
+#menu {
+    background-color: rgba(0, 0, 0, 0);
+    height: 100%;
+    width: 130px;
+    border: none;
+    border-right: 1px solid rgb(168, 168, 168);
+    outline: none;
+    border-radius: 10px 0px 0px 10px;
+    font-family: inter;
+    font-weight: bold;
+    color: #6E9E9D;
+    font-size: 1em;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#menu:hover {
+    cursor: pointer;
+}
+
+#img-cardapio {
+    background: url(../../../assets/Images/cardapio.png) center/cover;
+    width: 15px;
+    height: 15px;
+}
+
+#img-divisa {
+    background: url(../../../assets/Images/seta-baixo.png) center/cover;
+    width: 10px;
+    height: 5px;
+}
+
+#search {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    outline: none;
+    width: calc(100% - 240px);
+    padding: 0px 20px;
+    font-size: 1em;
+}
+
+#search::placeholder {
+    font-weight: bold;
+}
+
+#button-search {
+    width: 70px;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    border-left: 1px solid rgb(168, 168, 168);
+    outline: none;
+    border-radius: 0px 10px 10px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#button-search:hover {
+    cursor: pointer;
+}
+
+#img-search {
+    height: 20px;
+    width: 20px;
+    background: url(../../../assets/Images/pesquisar.png) center/cover;
+}
+
+.button-container {
+    display: flex;
+    gap: 15px;
+}
+
+.button-container button {
+    background-color: #E4DCCF;
+    width: 48px;
+    height: 48px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(206, 206, 206);
+}
+
+.button-container button:hover {
+    cursor: pointer;
+}
+
+.button-container button div {
+    width: 20px;
+    height: 20px;
+}
+
+#img-favoritos {
+    background: url(../../../assets/Images/favorito.png) center/cover;
+}
+
+#img-carrinho {
+    background: url(../../../assets/Images/carrinho.png) center/cover;
+}
+
+#img-conta {
+    background: url(../../../assets/Images/conta.png) center/cover;
+}
+
+#btn-ajuda {
+    background-color: #7D9D9C;
+    width: 250px;
+    height: 48px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 1em;
+    font-family: inter;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: 0.5s;
+}
+
+#btn-ajuda:hover {
+    cursor: pointer;
+    background-color: #718f8e;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#img-ajuda {
+    background: url(../../../assets/Images/ajuda.png) center/cover;
+    width: 15px;
+    height: 15px;
+}
+
+.menu-nav {
+    width: 100%;
+    max-width: 1350px;
+    margin: 20px auto;
+    padding: 0 35px;
+}
+
+nav {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    margin-bottom: 15px; /* Added margin */
+}
+
+nav a {
+    color: #726F6A9E;
+    text-decoration: none;
+}
+
+body > h2 {
+    font-size: 2em;
+    margin-top: 10px;
+}
+
+main {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center; /* Added center alignment */
+    gap: 20px; /* Added gap */
+    padding: 0 35px; /* Added padding */
+}
+
+.left-section {
+    padding: 0px 45px;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.filtro {
+    width: 300px;
+    height: 400px;
+    background-color: #7D9D9C;
+    border-radius: 15px;
+}
+
+.menu-filtro {
+    height: 60px;
+    border-radius: 15px 15px 0px 0px;
+    border-bottom: 1.5px solid rgb(134, 134, 134);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 0px 20px;
+    font-weight: bold;
+}
+
+.img-menu-filtro {
+    width: 15px;
+    height: 15px;
+    background: url(../../../assets/Images/seta-cima-1.png) center/cover;
+    cursor: pointer;
+}
+
+.conteudo-filtro {
+    height: 270px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 15px;
+    gap: 10px;
+}
+
+.conteudo-filtro a {
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+}
+
+.conteudo-filtro a span {
+    color: #FFFFFF80;
+}
+
+.ver-todos {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.ver-todos p {
+    font-weight: bold;
+    color: #497073;
+}
+
+.img-ver-todos {
+    width: 15px;
+    height: 15px;
+    background: url(../../../assets/Images/seta-baixo-2.png) center/cover;
+}
+
+.right-section {
+    width: 100%;
+    max-width: 1050px; /* Added max-width */
+    display: flex;
+    flex-direction: column;
+}
+
+.right-section-top {
+    width: 100%;
+    padding-bottom: 15px;
+    display: flex;
+    gap: 15px;
+}
+
+main .bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
+.left-bar, .right-bar {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.left-bar {
+    padding-left: 25px;
+}
+
+.left-bar a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #2C2C2C9E;
+}
+
+.right-bar {
+    padding-right: 25px;
+    display: flex;
+    justify-content: end;
+}
+
+.img-bar {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+#menu-1 {
+    background: url(../../../assets/Images/cardapio.png) center/cover;
+}
+
+#menu-2 {
+    background: url(../../../assets/Images/cardapio-2.png) center/cover;
+}
+
+#menu-3 {
+    background: url(../../../assets/Images/cardapio-3.png) center/cover;
+}
+
+.right-section-bottom {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding-bottom: 20px;
+    justify-content: flex-start; /* Added alignment */
+}
+
+.book-card {
+    width: 240px;
+    height: 420px;
+    border-radius: 15px;
+    background-color: #E4DCCF;
+    border: 1px solid rgb(206, 206, 206);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img-livro {
+    width: 180px;
+    height: 270px;
+    border-radius: 10px;
+    margin-top: 20px;
+    background-color: gray;
+}
+
+.book-card h2 {
+    font-size: 1.1em;
+    margin-top: 15px;
+    height: 60px;
+    text-align: center;
+    width: 190px;
+}
+
+.book-card h3 {
+    font-size: .9em;
+    color: #6E9E9D;
+}
+
+.avaliacao-livro {
+    width: 150px;
+    height: 24px;
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.avaliado, .nao-avaliado {
+    width: 24px;
+    height: 24px;
+}
+
+.avaliado {
+    background: url(../../../assets/Images/estrelas.png) center/cover;
+}
+
+.nao-avaliado {
+    background: url(../../../assets/Images/estrela-vazia.png) center/cover;
+}
+
+@media screen and (max-width: 1200px) {
+    header {
+        width: 100%;
+        padding: 0 20px;
+        gap: 10px;
+    }
+
+    .bar {
+        width: auto;
+        flex: 1;
+    }
+
+    .menu-nav {
+        padding: 0 20px;
+    }
+
+    main {
+        padding: 0 20px;
+        flex-direction: column;
+    }
+
+    .right-section-bottom {
+        justify-content: center;
+    }
+}

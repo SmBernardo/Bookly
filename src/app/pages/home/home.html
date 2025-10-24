@@ -1,0 +1,74 @@
+<header>
+        <div class="logo-container">
+            <div class="logo"></div>
+            <h1>Bookly</h1>
+        </div>
+
+        <nav>
+          <a routerLink="/catalogo">Livros</a>
+          <a href="#">Ebooks</a>
+          <a href="#">Audiobooks</a>
+        </nav>
+
+        <button id="login-button" (click)="irParaLogin()">Entre ou Cadastre-se</button>
+    </header>
+
+    <div class="bar">
+        <input type="text" id="search" placeholder="pesquisar no catálogo">
+        <button id="button-search">
+            <div id="img-search"></div>
+        </button>
+    </div>
+
+    <aside id="conteudo-1">
+        <div id="left-aside">
+            <h1>Descubra livros incriveis como</h1>
+            <button id="btn-destaque">Começar agora</button>
+        </div>
+        <div id="right-aside">
+            <div class="destaque">
+                <div class="img-destaque"></div>
+                <div class="conteudo-destaque">
+                    <h2>Último turno: 3</h2>
+                    <h3>por <span>Stephen King</span></h3>
+                    <p>Algo despertou no quarto 217 da Clínica de Traumatismo Cerebral. Algo maligno...</p>
+                </div>
+            </div>
+            <div class="destaque2">
+                <div class="img-destaque"></div>
+                <div class="conteudo-destaque">
+                    <h2>Último turno: 3</h2>
+                    <h3>por <span>Stephen King</span></h3>
+                    <p>Algo despertou no quarto 217 da Clínica de Traumatismo Cerebral. Algo maligno...</p>
+                </div>
+            </div>
+            <div class="destaque3">
+                <div class="img-destaque"></div>
+                <div class="conteudo-destaque">
+                    <h2>Último turno: 3</h2>
+                    <h3>por <span>Stephen King</span></h3>
+                    <p>Algo despertou no quarto 217 da Clínica de Traumatismo Cerebral. Algo maligno...</p>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <aside id="conteudo-2">
+        <div class="img-destaque-2"></div>
+        <div class="conteudo-destaque-2">
+            <h1>O mais acessado da semana!</h1>
+            <div class="avaliacao">
+              <img src="assets/images/estrelas.png">
+              <img src="assets/Images/estrelas.png">
+              <img src="assets/Images/estrelas.png">
+              <img src="assets/Images/estrelas.png">
+              <img src="assets/Images/estrelas.png">
+            </div>
+            <h2>As Aventuras de Sherlock Holmes</h2>
+            <h3>por <span>Arthur Conan Doyle</span></h3>
+            <button id="comprar-destaque">
+                <div id="img-comprar"></div>
+                R$ 69,90
+            </button>
+        </div>
+    </aside>

@@ -1,0 +1,246 @@
+@charset "UTF-8";
+
+#box {
+    margin: 0 auto;
+    background-color: #FFF8ED;
+    box-shadow: 17.5px 17.5px #7D9D9C;
+    max-width: 1200px;
+    width: 100%;
+    height: 700px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+main {
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+    display: flex;
+}
+
+#image-section {
+    width: 40%;
+    height: 100%;
+    background-color: #7D9D9C;
+    border-radius: 15px 0px 0px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-box {
+    width: 190px;
+    height: 190px;
+    border-radius: 10px;
+    margin-top: 60px;
+    margin-bottom: 25px;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.3);
+    background: #fffbf3 url(../../../assets/Images/bookly-logo.png) center/cover;
+}
+
+h2 {
+    font-family: inter;
+    font-size: 2em;
+}
+
+#login-section {
+    width: 60%;
+    height: 100%;
+    border-radius: 0px 15px 15px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    font-family: inter;
+}
+
+h1 {
+    font-size: 2.4em;
+    margin-bottom: 15px;
+    margin-top: 30px;
+}
+
+#login {
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    width: 672px;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.label-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    width: 47%;
+    gap: 5px;
+}
+
+#login input {
+    background-color: #E4DCCF63;
+    border: 1px solid #e4dccfc0;
+    height: 40px;
+    border-radius: 5px;
+    padding: 0px 10px;
+    outline: none;
+}
+
+#label-email input {
+    width: 650px;
+}
+
+#visualizar {
+    width: 30px;
+    height: 30px;
+    background: url(../../../assets/Images/visualizar.png) center/cover;
+    position: relative;
+    top: -40%;
+    left: 89%;
+    transition: 0.15s;
+}
+
+#visualizar:hover {
+    cursor: pointer;
+}
+
+#label-termos {
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    width: fit-content;
+    margin-top: -35px;
+}
+
+#criar {
+    display: block;
+    margin: 30px auto 0 auto;
+    width: 249px;
+    height: 48px;
+    background-color: #7D9D9C;
+    border-radius: 5px;
+    color: white;
+    font-family: inter;
+    border: none;
+    font-size: 1.35em;
+}
+
+#criar:hover {
+    cursor: pointer;
+    background-color: #6c8b8a;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 7.5px;
+    transition: 0.2s;
+}
+
+a {
+    color: #7D9D9C;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #6c8b8a;
+}
+
+#login .inp:focus {
+    border: 1px solid #d6bf9a;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1) inset;
+}
+
+@media screen and (max-width: 1200px) {
+    body {
+        background-color: #FFF8ED;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        overflow: hidden;
+        overflow-x: hidden;
+        width: 100vw;
+        height: 100vh;
+        box-sizing: border-box;
+    }
+
+    #box {
+        width: 100vw;
+        max-width: 100vw;
+        height: 100vh;
+        margin: 0;
+        box-shadow: none;
+        border-radius: none;
+        overflow: hidden;
+    }
+
+    main {
+        border-radius: 0px;
+        box-shadow: none;
+    }
+
+    #image-section {
+        display: none;
+    }
+
+    #login-section {
+        width: 100%;
+    }
+
+    h1 {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 765px) {
+    #login-section > p {
+        text-align: center;
+        padding-bottom: 50px;
+    }
+
+    #login{
+        width: calc(100% - 30px);
+        align-items: center;
+    }
+
+    .label-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        width: 100%;
+    }
+
+    #login label {
+        width: 100%;
+    }
+
+    #login input {
+        width: calc(100% - 20px);
+    }
+
+    #visualizar {
+        position: relative;
+        top: -41px;
+        left: 92%;
+    }
+
+    #label-confirmar {
+        margin-top: -35px;
+    }
+
+    #label-termos {
+        margin: 0px;
+    }
+
+    #label-termos input {
+        width: 15px;
+    }
+
+    #visualizar.visivel {
+        background: url(../../../assets/Images/visualizar-2.png) center/cover;
+    }
+}

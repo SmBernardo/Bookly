@@ -1,0 +1,50 @@
+<div id="box">
+        <main>
+            <section id="login-section">
+                <h1>Bem vindo de volta!</h1>
+                <p>Basta fazer o login para continuar explorando.</p>
+
+                <div id="login-box">
+                    <label for="nome">
+                        Nome
+                        <input type="text" id="nome">
+                    </label>
+                    <label for="email">
+                        Email
+                        <input type="email" id="email" placeholder="email@email.com">
+                    </label>
+                    <label for="senha">
+                        Senha
+                        <input [type]="tipoInputSenha" id="senha">
+                        <div id="visualizar" (click)="toggleSenha()"></div>
+                    </label>
+                </div>
+
+                <p style="margin-top: 15px;" id="conta-1">Não possui uma conta? <a routerLink="/cadastro">Criar</a></p>
+
+                <div id="mobile-login-button">
+                    <button id="login-button-1" (click)="fazerLogin()">Login</button>
+                </div>
+
+            </section>
+            <section id="image-section">
+
+                <section id="animação_logi">
+                    <div id="box_de_cima"></div>
+                    <div id="circulo_oco"></div>
+                    <div id="gota_de_cima"></div>
+                    <div id="gota_do_meio"></div>
+                    <div id="pontilhado"></div>
+                    <div id="circulo_esquerdo"></div>
+                    <div id="gota_de_baixo"></div>
+                    <div id="circulo_direito"></div>
+                    <div id="box_de_baixo"></div>
+                </section>
+
+                <div class="logo-box"></div>
+                <h2 id="bookly">bookly</h2>
+            </section>
+        </main>
+    </div>
+
+
