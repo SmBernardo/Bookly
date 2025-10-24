@@ -8,7 +8,7 @@ import { Livro } from '../models/livro.model'; // 1. Importe sua interface
 })
 export class LivroService {
 
-  // 2. Crie sua lista de "Mock Data" (dados fictícios)
+  // "Mock Data" (dados fictícios)
   private livros: Livro[] = [
     {
       id: 1,
@@ -16,7 +16,7 @@ export class LivroService {
       autor: 'Diana Wynne Jones',
       genero: 'Fantasia, Aventura',
       preco: 45.50,
-      imagemUrl: 'assets/Images/capas/castelo-animado.png'
+      imagemUrl: 'assets/images/capas/castelo-animado.png'
     },
     {
       id: 2,
@@ -24,7 +24,7 @@ export class LivroService {
       autor: 'Rita Lobo',
       genero: 'Gastronomia',
       preco: 89.90,
-      imagemUrl: 'assets/Images/capas/o-que-tem-na-geladeira.png'
+      imagemUrl: 'assets/images/capas/o-que-tem-na-geladeira.png'
     },
     {
       id: 3,
@@ -32,7 +32,7 @@ export class LivroService {
       autor: 'Colleen Hoover',
       genero: 'Romance',
       preco: 39.90,
-      imagemUrl: 'assets/Images/capas/assim-que-comeca.png'
+      imagemUrl: 'assets/images/capas/assim-que-comeca.png'
     },
     {
       id: 4,
@@ -40,9 +40,9 @@ export class LivroService {
       autor: 'Antoine de Saint-Exupéry',
       genero: 'Fantasia, Infantil',
       preco: 29.90,
-      imagemUrl: 'assets/Images/capas/pequeno-principe.png'
+      imagemUrl: 'assets/images/capas/pequeno-principe.png'
     }
-    // Adicione mais livros copiando do seu HTML
+
   ];
 
   constructor() { }
