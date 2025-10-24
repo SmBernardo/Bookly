@@ -14,10 +14,11 @@
     </header>
 
     <div class="bar">
-        <input type="text" id="search" placeholder="pesquisar no catálogo">
-        <button id="button-search">
-            <div id="img-search"></div>
-        </button>
+      <input #termoBusca type="text" id="search" placeholder="pesquisar no catálogo">
+
+      <button id="button-search" (click)="buscar(termoBusca.value)">
+        <div id="img-search"></div>
+      </button>
     </div>
 
     <aside id="conteudo-1">

@@ -21,4 +21,10 @@ export class HomeComponent {
   irParaLogin() {
     this.router.navigate(['/login']);
   }
+
+  buscar(termo: string): void {
+    // Navega para a página /catalogo e passa o termo da busca
+    // como um "parâmetro de consulta" (query parameter)
+    this.router.navigate(['/catalogo'], { queryParams: { q: termo } });
+  }
 }
