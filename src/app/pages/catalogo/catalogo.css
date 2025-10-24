@@ -22,7 +22,7 @@ header {
 .logo {
     width: 100px;
     height: 100px;
-    background: url(../../../assets/Images/bookly-logo.png) center/cover;
+    background: url(../../../assets/images/bookly-logo.png) center/cover;
 }
 
 .bar {
@@ -57,13 +57,13 @@ header {
 }
 
 #img-cardapio {
-    background: url(../../../assets/Images/cardapio.png) center/cover;
+    background: url(../../../assets/images/cardapio.png) center/cover;
     width: 15px;
     height: 15px;
 }
 
 #img-divisa {
-    background: url(../../../assets/Images/seta-baixo.png) center/cover;
+    background: url(../../../assets/images/seta-baixo.png) center/cover;
     width: 10px;
     height: 5px;
 }
@@ -100,7 +100,7 @@ header {
 #img-search {
     height: 20px;
     width: 20px;
-    background: url(../../../assets/Images/pesquisar.png) center/cover;
+    background: url(../../../assets/images/pesquisar.png) center/cover;
 }
 
 .button-container {
@@ -131,15 +131,15 @@ header {
 }
 
 #img-favoritos {
-    background: url(../../../assets/Images/favorito.png) center/cover;
+    background: url(../../../assets/images/favorito.png) center/cover;
 }
 
 #img-carrinho {
-    background: url(../../../assets/Images/carrinho.png) center/cover;
+    background: url(../../../assets/images/carrinho.png) center/cover;
 }
 
 #img-conta {
-    background: url(../../../assets/Images/conta.png) center/cover;
+    background: url(../../../assets/images/conta.png) center/cover;
 }
 
 #btn-ajuda {
@@ -165,7 +165,7 @@ header {
 }
 
 #img-ajuda {
-    background: url(../../../assets/Images/ajuda.png) center/cover;
+    background: url(../../../assets/images/ajuda.png) center/cover;
     width: 15px;
     height: 15px;
 }
@@ -233,7 +233,7 @@ main {
 .img-menu-filtro {
     width: 15px;
     height: 15px;
-    background: url(../../../assets/Images/seta-cima-1.png) center/cover;
+    background: url(../../../assets/images/seta-cima-1.png) center/cover;
     cursor: pointer;
 }
 
@@ -274,7 +274,7 @@ main {
 .img-ver-todos {
     width: 15px;
     height: 15px;
-    background: url(../../../assets/Images/seta-baixo-2.png) center/cover;
+    background: url(../../../assets/images/seta-baixo-2.png) center/cover;
 }
 
 .right-section {
@@ -329,15 +329,15 @@ main .bar {
 }
 
 #menu-1 {
-    background: url(../../../assets/Images/cardapio.png) center/cover;
+    background: url(../../../assets/images/cardapio.png) center/cover;
 }
 
 #menu-2 {
-    background: url(../../../assets/Images/cardapio-2.png) center/cover;
+    background: url(../../../assets/images/cardapio-2.png) center/cover;
 }
 
 #menu-3 {
-    background: url(../../../assets/Images/cardapio-3.png) center/cover;
+    background: url(../../../assets/images/cardapio-3.png) center/cover;
 }
 
 .right-section-bottom {
@@ -361,11 +361,13 @@ main .bar {
 }
 
 .img-livro {
-    width: 180px;
-    height: 270px;
-    border-radius: 10px;
-    margin-top: 20px;
-    background-color: gray;
+  width: 180px;
+  height: 270px;
+  border-radius: 10px;
+  margin-top: 20px;
+  background-color: #ccc;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .book-card h2 {
@@ -395,11 +397,11 @@ main .bar {
 }
 
 .avaliado {
-    background: url(../../../assets/Images/estrelas.png) center/cover;
+    background: url(../../../assets/images/estrelas.png) center/cover;
 }
 
 .nao-avaliado {
-    background: url(../../../assets/Images/estrela-vazia.png) center/cover;
+    background: url(../../../assets/images/estrela-vazia.png) center/cover;
 }
 
 @media screen and (max-width: 1200px) {
