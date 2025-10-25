@@ -8,9 +8,6 @@
 }
 
 body {
-    /* Vamos usar o fundo padrão do seu app */
     background-color: #fffbf3;
     font-family: inter;
-    /* O Angular já cuida do 'display: flex' de outra forma,
-       mas podemos adicionar isso se necessário depois. */
 }

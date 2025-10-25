@@ -7,16 +7,13 @@ import { Injectable } from '@angular/core';
 })
 export class UsuarioService {
 
-  // 1. "lista estática (Array)" para "mocking" (requisito do PDF)
+  // lista estática (Array)" para "mocking
   private usuariosCadastrados: any[] = [];
 
   constructor() { }
 
-  // 2. "funcionalidade de cadastro... organizada em classe do tipo service" (requisito do PDF)
+  // funcionalidade de cadastro... organizada em classe do tipo service"
   cadastrarUsuario(novoUsuario: any): void {
-
-    // Em um app real, você enviaria isso para uma API.
-    // Aqui, estamos apenas simulando o armazenamento na lista.
 
     this.usuariosCadastrados.push(novoUsuario);
 

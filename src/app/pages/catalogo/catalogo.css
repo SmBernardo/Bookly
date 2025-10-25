@@ -182,7 +182,7 @@ nav {
     display: flex;
     align-items: center;
     font-weight: bold;
-    margin-bottom: 15px; /* Added margin */
+    margin-bottom: 15px;
 }
 
 nav a {
@@ -198,9 +198,9 @@ body > h2 {
 main {
     margin-top: 15px;
     display: flex;
-    justify-content: center; /* Added center alignment */
-    gap: 20px; /* Added gap */
-    padding: 0 35px; /* Added padding */
+    justify-content: center;
+    gap: 20px;
+    padding: 0 35px;
 }
 
 .left-section {
@@ -279,7 +279,7 @@ main {
 
 .right-section {
     width: 100%;
-    max-width: 1050px; /* Added max-width */
+    max-width: 1050px;
     display: flex;
     flex-direction: column;
 }
@@ -346,7 +346,7 @@ main .bar {
     flex-wrap: wrap;
     gap: 15px;
     padding-bottom: 20px;
-    justify-content: flex-start; /* Added alignment */
+    justify-content: flex-start;
 }
 
 .book-card {

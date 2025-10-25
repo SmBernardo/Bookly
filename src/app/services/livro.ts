@@ -1,14 +1,14 @@
 // src/app/services/livro.service.ts
 
 import { Injectable } from '@angular/core';
-import { Livro } from '../models/livro.model'; // 1. Importe sua interface
+import { Livro } from '../models/livro.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LivroService {
 
-  // "Mock Data" (dados fictícios)
+  // Mock Data (dados fictícios)
   private livros: Livro[] = [
     {
       id: 1,
@@ -47,21 +47,19 @@ export class LivroService {
 
   constructor() { }
 
-  // 3. Crie uma função para "Listar" os livros
-  // Esta é a sua funcionalidade de "listagem" e "pesquisa"
+  // função para listar os livros
   getLivros(termoBusca?: string): Livro[] {
     if (!termoBusca || termoBusca.trim() === '') {
       return this.livros; // Retorna todos os livros se a busca for vazia
     }
 
-    // Retorna os livros filtrados (simulando a "pesquisa")
+    // Retorna os livros filtrados
     return this.livros.filter(livro =>
       livro.titulo.toLowerCase().includes(termoBusca.toLowerCase()) ||
       livro.autor.toLowerCase().includes(termoBusca.toLowerCase())
     );
   }
 
-  // No futuro, você pode adicionar outras funções do CRUD aqui
   // getLivroById(id: number) { ... }
   // adicionarLivro(livro: Livro) { ... }
   // excluirLivro(id: number) { ... }
