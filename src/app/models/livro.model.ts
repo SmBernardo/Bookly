@@ -7,5 +7,4 @@ export interface Livro {
   genero: string;
   preco: number;
   imagemUrl: string;
-  // Adicione outros campos se quiser (ex: sinopse, estrelas)
 }
