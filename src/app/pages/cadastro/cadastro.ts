@@ -3,7 +3,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterLink } from '@angular/router';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { UsuarioService } from '../../services/usuario';
 
 @Component({
@@ -14,7 +14,7 @@ import { UsuarioService } from '../../services/usuario';
   imports: [
     CommonModule,
     RouterLink,
-    FormsModule
+    ReactiveFormsModule
   ]
 })
 export class CadastroComponent {
