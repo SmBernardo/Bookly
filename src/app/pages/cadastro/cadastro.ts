@@ -53,7 +53,11 @@ export class CadastroComponent {
       email: this.email,
       senha: this.senha
     };
-    this.usuarioService.cadastrarUsuario(novoUsuario);
-    this.router.navigate(['/obrigado']);
+
+    this.usuarioService.cadastrarUsuario(novoUsuario).subscribe(() => {
+      // Só navega depois que o cadastro for concluído
+      console.log('Usuário cadastrado com sucesso via HTTP POST!');
+      this.router.navigate(['/obrigado']);
+    });
   }
 }
