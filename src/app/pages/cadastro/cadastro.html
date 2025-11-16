@@ -9,7 +9,7 @@
                 <label for="nome">
                     Nome
                     <input type="text" id="nome" class="inp" formControlName="nome">
-                    <div *ngIf="cadastroForm.get('nome').invalid && (cadastroForm.get('nome').touched || cadastroForm.get('nome').dirty)">
+                    <div *ngIf="cadastroForm.get('nome')?.invalid && (cadastroForm.get('nome')?.touched || cadastroForm.get('nome')?.dirty)">
                       Nome é obrigatório.
                       </div>
                 </label>
@@ -21,10 +21,10 @@
             <label for="email" id="label-email">
                 Email
                 <input type="email" id="email" class="inp" placeholder="email@email.com" formControlName="email">
-                <div *ngIf="cadastroForm.get('email').invalid && (cadastroForm.get('email').touched || cadastroForm.get('email').dirty)">
-                <span *ngIf="cadastroForm.get('email').errors?.['required']">Email é obrigatório.</span>
-                <span *ngIf="cadastroForm.get('email').errors?.['email']">Formato de email inválido.</span>
-                </div>
+                <div *ngIf="cadastroForm.get('email')?.invalid && (cadastroForm.get('email')?.touched || cadastroForm.get('email')?.dirty)">
+    <span *ngIf="cadastroForm.get('email')?.errors?.['required']">Email é obrigatório.</span>
+    <span *ngIf="cadastroForm.get('email')?.errors?.['email']">Formato de email inválido.</span>
+</div>
             </label>
             <div class="label-container">
                 <label for="senha">
