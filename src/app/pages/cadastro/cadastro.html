@@ -9,6 +9,9 @@
                 <label for="nome">
                     Nome
                     <input type="text" id="nome" class="inp" formControlName="nome">
+                    <div *ngIf="cadastroForm.get('nome').invalid && (cadastroForm.get('nome').touched || cadastroForm.get('nome').dirty)">
+                      Nome é obrigatório.
+                      </div>
                 </label>
                 <label for="sobrenome">
                     Sobrenome
@@ -18,6 +21,10 @@
             <label for="email" id="label-email">
                 Email
                 <input type="email" id="email" class="inp" placeholder="email@email.com" formControlName="email">
+                <div *ngIf="cadastroForm.get('email').invalid && (cadastroForm.get('email').touched || cadastroForm.get('email').dirty)">
+                <span *ngIf="cadastroForm.get('email').errors?.['required']">Email é obrigatório.</span>
+                <span *ngIf="cadastroForm.get('email').errors?.['email']">Formato de email inválido.</span>
+                </div>
             </label>
             <div class="label-container">
                 <label for="senha">
@@ -39,4 +46,13 @@
         <button id="criar" type="submit">Criar conta</button>
 
     </form> <p style="margin-top: 15px;">Já possui uma conta? <a routerLink="/login">Entre</a></p>
+
+    <style>
+      div[ngIf] {
+        color: red;
+        font-size: 0.8em;
+        margin-top: 5px;
+        }
+    </style>
+
 </section>
