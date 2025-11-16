@@ -1,25 +1,21 @@
 // src/app/services/usuario.ts
 
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UsuarioService {
 
-  // lista estática (Array)" para "mocking
-  private usuariosCadastrados: any[] = [];
+  private apiUrl = 'http://localhost:3000/usuarios';
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
-  // funcionalidade de cadastro... organizada em classe do tipo service"
-  cadastrarUsuario(novoUsuario: any): void {
+  // funcionalidade de cadastro
+  cadastrarUsuario(novoUsuario: any): Observable<any> {
 
-    this.usuariosCadastrados.push(novoUsuario);
-
-    console.log('--- NOVO USUÁRIO CADASTRADO (no Service) ---');
-    console.log(novoUsuario);
-    console.log('--- LISTA DE USUÁRIOS ATUAL ---');
-    console.log(this.usuariosCadastrados);
+    return this.http.post<any>(this.apiUrl, novoUsuario);
   }
 }

@@ -1,0 +1,37 @@
+{
+  "livros": [
+    {
+      "id": 1,
+      "titulo": "O Castelo Animado",
+      "autor": "Diana Wynne Jones",
+      "genero": "Fantasia, Aventura",
+      "preco": 45.50,
+      "imagemUrl": "assets/images/capas/castelo-animado.png"
+    },
+    {
+      "id": 2,
+      "titulo": "O Que Tem na Geladeira?",
+      "autor": "Rita Lobo",
+      "genero": "Gastronomia",
+      "preco": 89.90,
+      "imagemUrl": "assets/images/capas/o-que-tem-na-geladeira.png"
+    },
+    {
+      "id": 3,
+      "titulo": "É Assim que Começa",
+      "autor": "Colleen Hoover",
+      "genero": "Romance",
+      "preco": 39.90,
+      "imagemUrl": "assets/images/capas/assim-que-comeca.png"
+    },
+    {
+      "id": 4,
+      "titulo": "O Pequeno Príncipe",
+      "autor": "Antoine de Saint-Exupéry",
+      "genero": "Fantasia, Infantil",
+      "preco": 29.90,
+      "imagemUrl": "assets/images/capas/pequeno-principe.png"
+    }
+  ],
+  "usuarios": []
+}
