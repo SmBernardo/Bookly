@@ -3,7 +3,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterLink } from '@angular/router';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormGroup, FormControl, Validators } from '@angular/forms';
 import { UsuarioService } from '../../services/usuario';
 
 @Component({
@@ -19,20 +19,25 @@ import { UsuarioService } from '../../services/usuario';
 })
 export class CadastroComponent {
 
-  public nome: string = '';
-  public sobrenome: string = '';
-  public email: string = '';
-  public senha: string = '';
-
   // --- Lógica do 'senha.js' ---
   public senhaVisivel: boolean = false;
   public tipoInputSenha: string = 'password';
+
+  cadastroForm: FormGroup;
 
   // Injeta o Router no construtor
   constructor(
     private router: Router,
     private usuarioService: UsuarioService
-  ) { }
+  ) {
+    this.cadastroForm = new FormGroup({
+      // Adiciona validadores
+      'nome': new FormControl('', Validators.required),
+      'sobrenome': new FormControl('', Validators.required),
+      'email': new FormControl('', [Validators.required, Validators.email]),
+      'senha': new FormControl('', [Validators.required, Validators.minLength(6)])
+    });
+  }
 
   // Cria a função para mostrar/ocultar a senha (lógica do 'senha.js')
   toggleSenha() {
@@ -47,15 +52,9 @@ export class CadastroComponent {
 
   // Cria a função para o botão "Criar Conta" (lógica do 'cadastrar.js')
   criarConta() {
-    const novoUsuario = {
-      nome: this.nome,
-      sobrenome: this.sobrenome,
-      email: this.email,
-      senha: this.senha
-    };
+    const novoUsuario = this.cadastroForm.value;
 
     this.usuarioService.cadastrarUsuario(novoUsuario).subscribe(() => {
-      // Só navega depois que o cadastro for concluído
       console.log('Usuário cadastrado com sucesso via HTTP POST!');
       this.router.navigate(['/obrigado']);
     });
