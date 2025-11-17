@@ -161,7 +161,10 @@ h1 {
     height: 40px;
     border-radius: 5px;
     padding: 0px 10px;
+    padding-right: 40px;
     outline: none;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 #login-box input:focus {
@@ -169,18 +172,26 @@ h1 {
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1) inset;
 }
 
-#visualizar {
-    width: 30px;
-    height: 30px;
-    background: url(../../../assets/Images/visualizar.png) center/cover;
+.senha-container {
     position: relative;
-    top: -40%;
-    left: 91%;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+#visualizar {
+    width: 24px;
+    height: 24px;
+    background: url(../../../assets/Images/visualizar.png) center/contain no-repeat;
+    position: absolute;
+    right: 12px;
+    cursor: pointer;
     transition: 0.15s;
 }
 
 #visualizar:hover {
     cursor: pointer;
+    opacity: 0.7;
 }
 
 a {
@@ -239,7 +250,7 @@ a:hover {
     }
 
     #visualizar {
-        top: -40px;
+        right: 12px;
     }
 
     #login-button-1, #login-button-2 {

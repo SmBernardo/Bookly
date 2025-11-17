@@ -24,13 +24,14 @@
             </label>
             <label for="senha">
                 Senha
-                <input [type]="tipoInputSenha" id="senha" formControlName="senha">
-                <div id="visualizar" (click)="toggleSenha()" [class.visivel]="senhaVisivel"></div>
+                <div class="senha-container">
+                    <input [type]="tipoInputSenha" id="senha" formControlName="senha">
+                    <div id="visualizar" (click)="toggleSenha()" [class.visivel]="senhaVisivel"></div>
+                </div>
+            </label>
             <div *ngIf="loginForm.get('senha')?.invalid && (loginForm.get('senha')?.touched)">
                 Senha é obrigatória.
             </div>
-                <div id="visualizar" (click)="toggleSenha()"></div>
-            </label>
         </div>
 
         <p style="margin-top: 15px;" id="conta-1">Não possui uma conta? <a routerLink="/cadastro">Criar</a></p>
