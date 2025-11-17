@@ -26,7 +26,6 @@ export class LoginComponent {
 
     this.loginForm = new FormGroup({
       // Adiciona validadores
-      'nome': new FormControl('', Validators.required),
       'email': new FormControl('', [Validators.required, Validators.email]),
       'senha': new FormControl('', Validators.required)
     });

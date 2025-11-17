@@ -7,13 +7,6 @@
     <form [formGroup]="loginForm" (ngSubmit)="fazerLogin()">
 
         <div id="login-box">
-            <label for="nome">
-                Nome
-                <input type="text" id="nome" formControlName="nome">
-                <div *ngIf="loginForm.get('nome')?.invalid && (loginForm.get('nome')?.touched)">
-                Nome é obrigatório.
-            </div>
-            </label>
             <label for="email">
                 Email
                 <input type="email" id="email" placeholder="email@email.com" formControlName="email">
