@@ -23,7 +23,7 @@
                         <label for="sobrenome">
                             Sobrenome
                             <input type="text" id="sobrenome" class="inp" formControlName="sobrenome">
-                             </label>
+                        </label>
                     </div>
                     <label for="email" id="label-email">
                         Email
@@ -36,8 +36,7 @@
                     <div class="label-container">
                         <label for="senha">
                             Senha
-                            <div class="senha-container">
-                                <input [type]="tipoInputSenha" id="senha" class="inp" formControlName="senha">
+                            <div class="senha-container"> <input [type]="tipoInputSenha" id="senha" class="inp" formControlName="senha">
                                 <div id="visualizar" (click)="toggleSenha()" [class.visivel]="senhaVisivel"></div>
                             </div>
                              <div *ngIf="cadastroForm.get('senha')?.invalid && (cadastroForm.get('senha')?.touched || cadastroForm.get('senha')?.dirty)" class="error-message">
@@ -45,22 +44,36 @@
                                 <span *ngIf="cadastroForm.get('senha')?.errors?.['minlength']">A senha precisa ter no mínimo 6 caracteres.</span>
                             </div>
                         </label>
+
                         <label for="confirmar" id="label-confirmar">
-                            Confirmar senha
-                            <input type="password" id="confirmar" class="inp">
-                        </label>
-                    </div>
+    Confirmar senha
+    <input type="password" id="confirmar" class="inp" formControlName="confirmarSenha">
+
+    <div *ngIf="cadastroForm.get('confirmarSenha')?.invalid && cadastroForm.get('confirmarSenha')?.touched" class="error-message">
+        <span *ngIf="cadastroForm.get('confirmarSenha')?.errors?.['required']">Confirmação é obrigatória.</span>
+    </div>
+
+    <div *ngIf="cadastroForm.errors?.['passwordMismatch'] && cadastroForm.get('confirmarSenha')?.touched" class="error-message">
+        As senhas não conferem.
+    </div>
+</label>
+                        </div>
+
                     <label for="termos" id="label-termos">
-                        <input type="checkbox" name="termos" id="termos">
-                        Eu li e concordo com os termos de uso.
-                    </label>
-                </div>
+    <input type="checkbox" id="termos" formControlName="termos">
+    Eu li e concordo com os termos de uso.
+
+    <div *ngIf="cadastroForm.get('termos')?.invalid && (cadastroForm.get('termos')?.touched || cadastroForm.get('termos')?.dirty)" class="error-message">
+        Você deve aceitar os termos de uso para continuar.
+    </div>
+</label>
+                    </div>
 
                 <button id="criar" type="submit" [disabled]="cadastroForm.invalid">Criar conta</button>
 
             </form>
             <p style="margin-top: 15px;">Já possui uma conta? <a routerLink="/login">Entre</a></p>
 
-            </section>
+        </section>
     </main>
 </div>

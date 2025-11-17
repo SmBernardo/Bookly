@@ -3,8 +3,18 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterLink } from '@angular/router';
-import { ReactiveFormsModule, FormGroup, FormControl, Validators } from '@angular/forms';
+import { ReactiveFormsModule, FormGroup, FormControl, Validators, ValidatorFn, ValidationErrors, AbstractControl } from '@angular/forms';
 import { UsuarioService } from '../../services/usuario';
+
+export const matchPasswordValidator: ValidatorFn = (control: AbstractControl): ValidationErrors | null => {
+  const senha = control.get('senha');
+  const confirmarSenha = control.get('confirmarSenha');
+
+  if (!senha || !confirmarSenha || senha.value === confirmarSenha.value) {
+    return null;
+  }
+  return { 'passwordMismatch': true };
+};
 
 @Component({
   selector: 'app-cadastro',
@@ -35,7 +45,12 @@ export class CadastroComponent {
       'nome': new FormControl('', Validators.required),
       'sobrenome': new FormControl('', Validators.required),
       'email': new FormControl('', [Validators.required, Validators.email]),
-      'senha': new FormControl('', [Validators.required, Validators.minLength(6)])
+      'senha': new FormControl('', [Validators.required, Validators.minLength(6)]),
+      'confirmarSenha': new FormControl('', Validators.required),
+      'termos': new FormControl(false, Validators.requiredTrue)
+    },
+    {
+      validators: matchPasswordValidator
     });
   }
 
