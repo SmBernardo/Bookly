@@ -6,6 +6,10 @@
 
     <form [formGroup]="loginForm" (ngSubmit)="fazerLogin()">
 
+      <div *ngIf="loginInvalido" class="error-message" style="text-align: center; margin-bottom: 10px;">
+        E-mail ou senha inválidos.
+      </div>
+      
         <div id="login-box">
             <label for="email">
                 Email

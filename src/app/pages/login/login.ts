@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { ReactiveFormsModule, FormGroup, FormControl, Validators } from '@angular/forms';
+import { UsuarioService } from '../../services/usuario';
 
 @Component({
   selector: 'app-login',
@@ -19,9 +20,11 @@ export class LoginComponent {
   public tipoInputSenha: string = 'password';
 
   loginForm: FormGroup;
+  public loginInvalido: boolean = false;
 
   constructor(
-    private router: Router
+    private router: Router,
+    private usuarioService: UsuarioService
   ) {
 
     this.loginForm = new FormGroup({
@@ -43,11 +46,30 @@ export class LoginComponent {
   }
 
   fazerLogin() {
-    const dadosLogin = this.loginForm.value;
+    this.loginInvalido = false;
+    if (this.loginForm.invalid) {
+      return;
+    }
 
-    console.log('--- DADOS DO FORMULÁRIO DE LOGIN ---');
-    console.log(dadosLogin);
+    const email = this.loginForm.value.email;
+    const senha = this.loginForm.value.senha;
 
-    this.router.navigate(['/']);
+    this.usuarioService.login(email).subscribe(usuariosEncontrados => {
+      if (usuariosEncontrados.length > 0) {
+        const usuario = usuariosEncontrados[0];
+
+        if (usuario.senha === senha) {
+          console.log('Login bem-sucedido!', usuario);
+          this.router.navigate(['/']);
+        } else {
+          this.loginInvalido = true;
+          console.log('Senha incorreta');
+        }
+
+      } else {
+        this.loginInvalido = true;
+        console.log('Usuário não encontrado');
+      }
+    });
   }
 }
