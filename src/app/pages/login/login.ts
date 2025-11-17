@@ -60,7 +60,7 @@ export class LoginComponent {
 
         if (usuario.senha === senha) {
           console.log('Login bem-sucedido!', usuario);
-          this.router.navigate(['/']);
+          this.router.navigate(['/catalogo']);
         } else {
           this.loginInvalido = true;
           console.log('Senha incorreta');

@@ -92,22 +92,40 @@ label {
     outline: none;
 }
 
-#label-email input {
-    width: 650px;
+.senha-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.senha-container input {
+    width: 100%;
+    padding-right: 40px;
+    box-sizing: border-box;
 }
 
 #visualizar {
-    width: 30px;
-    height: 30px;
-    background: url(../../../assets/Images/visualizar.png) center/cover;
-    position: relative;
-    top: -40%;
-    left: 89%;
+    width: 24px;
+    height: 24px;
+    background: url(../../../assets/Images/visualizar.png) center/contain no-repeat;
+    position: absolute;
+    right: 12px;
+    cursor: pointer;
     transition: 0.15s;
 }
 
 #visualizar:hover {
     cursor: pointer;
+    opacity: 0.7;
+}
+
+#visualizar.visivel {
+    background: url(../../../assets/Images/visualizar-2.png) center/contain no-repeat;
+}
+
+#label-email input {
+    width: 650px;
 }
 
 #label-termos {
@@ -223,9 +241,10 @@ a:hover {
     }
 
     #visualizar {
-        position: relative;
-        top: -41px;
-        left: 92%;
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%);
     }
 
     #label-confirmar {
@@ -239,22 +258,5 @@ a:hover {
     #label-termos input {
         width: 15px;
     }
-
-    #visualizar.visivel {
-        background: url(../../../assets/Images/visualizar-2.png) center/cover;
-    }
 }
 
-.error-message {
-  color: #c0392b;
-  font-size: 0.85em;
-  font-weight: 500;
-  margin-top: 5px;
-  display: block;
-}
-
-button:disabled {
-  background-color: #999;
-  cursor: not-allowed;
-  opacity: 0.7;
-}
