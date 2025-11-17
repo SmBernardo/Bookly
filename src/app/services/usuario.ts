@@ -12,10 +12,12 @@ export class UsuarioService {
   private apiUrl = 'http://localhost:3000/usuarios';
 
   constructor(private http: HttpClient) { }
-
   // funcionalidade de cadastro
   cadastrarUsuario(novoUsuario: any): Observable<any> {
-
     return this.http.post<any>(this.apiUrl, novoUsuario);
+  }
+
+  login(email: string): Observable<any[]> {
+    return this.http.get<any[]>(`${this.apiUrl}?email=${email}`);
   }
 }
