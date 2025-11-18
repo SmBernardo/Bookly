@@ -541,3 +541,11 @@ a:hover {
     right: -62.5%;
 }
 }
+
+.error-message {
+  color: #c0392b; /* Vermelho consistente */
+  font-size: 0.8em;
+  margin-top: 2px;
+  margin-bottom: 10px; /* Adiciona espaço para não colar no próximo input */
+  display: block; /* Garante que ocupe a linha inteira */
+}
