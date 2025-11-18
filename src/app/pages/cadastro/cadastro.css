@@ -124,6 +124,25 @@ label {
     background: url(../../../assets/Images/visualizar-2.png) center/contain no-repeat;
 }
 
+#visualizar-confirmar {
+    width: 24px;
+    height: 24px;
+    background: url(../../../assets/Images/visualizar.png) center/contain no-repeat;
+    position: absolute;
+    right: 12px;
+    cursor: pointer;
+    transition: 0.15s;
+}
+
+#visualizar-confirmar:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+#visualizar-confirmar.visivel {
+    background: url(../../../assets/Images/visualizar-2.png) center/contain no-repeat;
+}
+
 #label-email input {
     width: 650px;
 }
@@ -234,6 +253,7 @@ a:hover {
 
     #login label {
         width: 100%;
+        margin-bottom: 10px;
     }
 
     #login input {
@@ -260,3 +280,35 @@ a:hover {
     }
 }
 
+.input-icon-wrapper {
+    position: relative;
+    margin-bottom: 5px;
+}
+
+.input-icon-wrapper input {
+    padding-right: 50px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.error-message {
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+#visualizar-confirmar {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    background-position: center;
+    background: url(../../../assets/Images/visualizar.png) center/cover;
+}
+
+#visualizar-confirmar.visivel {
+    background: url(../../../assets/Images/visualizar-2.png) center/cover;
+}
