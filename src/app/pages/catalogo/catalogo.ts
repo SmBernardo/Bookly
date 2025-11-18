@@ -3,7 +3,7 @@ import { LivroService } from '../../services/livro';
 import { CommonModule } from '@angular/common';
 import { DomSanitizer, SafeStyle } from '@angular/platform-browser';
 import { Livro } from '../../models/livro.model';
-import { RouterLink, ActivatedRoute } from '@angular/router';
+import { Router, RouterLink, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-catalogo',
@@ -21,7 +21,8 @@ export class CatalogoComponent implements OnInit {
     private livroService: LivroService,
     private sanitizer: DomSanitizer,
     private route: ActivatedRoute,
-    private cdRef: ChangeDetectorRef
+    private cdRef: ChangeDetectorRef,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -35,6 +36,16 @@ export class CatalogoComponent implements OnInit {
         this.carregarLivros(termoBusca);
       });
     });
+  }
+
+  pesquisarLivros(termo: string): void {
+    if (termo && termo.trim() !== '') {
+      this.router.navigate(['/catalogo'], {
+        queryParams: { q: termo }
+      });
+    } else {
+      this.router.navigate(['/catalogo']);
+    }
   }
 
   private carregarLivros(termoBusca?: string): void {
