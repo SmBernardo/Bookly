@@ -20,4 +20,8 @@ export class UsuarioService {
   login(email: string): Observable<any[]> {
     return this.http.get<any[]>(`${this.apiUrl}?email=${email}`);
   }
+
+  excluirUsuario(id: string): Observable<any> {
+    return this.http.delete(`${this.apiUrl}/${id}`);
+  }
 }
