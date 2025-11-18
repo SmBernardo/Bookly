@@ -29,9 +29,10 @@ export const matchPasswordValidator: ValidatorFn = (control: AbstractControl): V
 })
 export class CadastroComponent {
 
-  // --- Lógica do 'senha.js' ---
   public senhaVisivel: boolean = false;
   public tipoInputSenha: string = 'password';
+  public senhaVisivelConfirmar: boolean = false;
+  public tipoInputSenhaConfirmar: string = 'password';
 
   cadastroForm: FormGroup;
 
@@ -54,18 +55,18 @@ export class CadastroComponent {
     });
   }
 
-  // Cria a função para mostrar/ocultar a senha (lógica do 'senha.js')
+  // Cria a função para mostrar/ocultar a senha
   toggleSenha() {
     this.senhaVisivel = !this.senhaVisivel;
-
-    if (this.senhaVisivel) {
-      this.tipoInputSenha = 'text';
-    } else {
-      this.tipoInputSenha = 'password';
-    }
+    this.tipoInputSenha = this.senhaVisivel ? 'text' : 'password';
   }
 
-  // Cria a função para o botão "Criar Conta" (lógica do 'cadastrar.js')
+  toggleSenhaConfirmar() {
+    this.senhaVisivelConfirmar = !this.senhaVisivelConfirmar;
+    this.tipoInputSenhaConfirmar = this.senhaVisivelConfirmar ? 'text' : 'password';
+  }
+
+  // Cria a função para o botão "Criar Conta"
   criarConta() {
     const novoUsuario = this.cadastroForm.value;
 

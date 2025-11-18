@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit(): void {
-    if (localStorage.getItem('usuarioLogado')) {
+    if (typeof localStorage !== 'undefined' && localStorage.getItem('usuarioLogado')) {
       this.usuarioLogado = true;
     }
   }
