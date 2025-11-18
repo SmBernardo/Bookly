@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { LivroService } from '../../services/livro';
 import { CommonModule } from '@angular/common';
 import { DomSanitizer, SafeStyle } from '@angular/platform-browser';
@@ -15,22 +15,39 @@ export class CatalogoComponent implements OnInit {
 
   listaDeLivros: Livro[] = [];
 
+  public carregando: boolean = true;
+
   constructor(
     private livroService: LivroService,
     private sanitizer: DomSanitizer,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private cdRef: ChangeDetectorRef
   ) { }
 
   ngOnInit(): void {
-    // Lê os parâmetros da URL
     this.route.queryParams.subscribe(params => {
       const termoBusca = params['q'];
 
-      // Chamando o Subscribe
-      this.livroService.getLivros(termoBusca).subscribe(livrosRetornados => {
-        this.listaDeLivros = livrosRetornados;
-      });
+      this.carregarLivros(termoBusca);
     });
+  }
+
+  private carregarLivros(termoBusca?: string): void {
+      this.carregando = true;
+
+      this.livroService.getLivros(termoBusca).subscribe({
+          next: (livrosRetornados) => {
+              this.listaDeLivros = livrosRetornados;
+              this.carregando = false;
+              this.cdRef.detectChanges();
+              console.log(`Livros carregados: ${livrosRetornados.length}`);
+          },
+          error: (err) => {
+              console.error('ERRO CRÍTICO ao buscar livros da API:', err);
+              this.listaDeLivros = [];
+              this.carregando = false;
+          }
+      });
   }
 
   // Garante que o Angular aceite o estilo como seguro

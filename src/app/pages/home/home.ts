@@ -23,8 +23,11 @@ export class HomeComponent {
   }
 
   buscar(termo: string): void {
-    // Navega para a página /catalogo e passa o termo da busca
-    // como um "parâmetro de consulta" (query parameter)
-    this.router.navigate(['/catalogo'], { queryParams: { q: termo } });
-  }
+        if (termo && termo.trim() !== '') {
+
+            this.router.navigate(['/catalogo'], { queryParams: { q: termo } });
+        } else {
+            this.router.navigate(['/catalogo']);
+        }
+    }
 }

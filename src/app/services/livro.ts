@@ -19,7 +19,7 @@ export class LivroService {
 
     // O JSON-Server suporta busca com "?q="
     if (termoBusca && termoBusca.trim() !== '') {
-      url += `?q=${termoBusca}`;
+      url += `?q=${encodeURIComponent(termoBusca)}`;
     }
 
     return this.http.get<Livro[]>(url);
