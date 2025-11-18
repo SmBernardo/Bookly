@@ -10,7 +10,13 @@
           <a href="#">Audiobooks</a>
         </nav>
 
-        <button id="login-button" (click)="irParaLogin()">Entre ou Cadastre-se</button>
+        <button *ngIf="!usuarioLogado" id="login-button" (click)="irParaLogin()">
+            Entre ou Cadastre-se
+        </button>
+
+        <button *ngIf="usuarioLogado" id="btn-conta-home" (click)="irParaPerfil()">
+            <div id="img-conta"></div>
+        </button>
     </header>
 
     <div class="bar">

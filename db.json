@@ -1,37 +1,65 @@
 {
   "livros": [
     {
-      "id": 1,
+      "id": "1",
       "titulo": "O Castelo Animado",
       "autor": "Diana Wynne Jones",
       "genero": "Fantasia, Aventura",
-      "preco": 45.50,
+      "preco": 45.5,
       "imagemUrl": "assets/images/capas/castelo-animado.png"
     },
     {
-      "id": 2,
+      "id": "2",
       "titulo": "O Que Tem na Geladeira?",
       "autor": "Rita Lobo",
       "genero": "Gastronomia",
-      "preco": 89.90,
+      "preco": 89.9,
       "imagemUrl": "assets/images/capas/o-que-tem-na-geladeira.png"
     },
     {
-      "id": 3,
+      "id": "3",
       "titulo": "É Assim que Começa",
       "autor": "Colleen Hoover",
       "genero": "Romance",
-      "preco": 39.90,
+      "preco": 39.9,
       "imagemUrl": "assets/images/capas/assim-que-comeca.png"
     },
     {
-      "id": 4,
+      "id": "4",
       "titulo": "O Pequeno Príncipe",
       "autor": "Antoine de Saint-Exupéry",
       "genero": "Fantasia, Infantil",
-      "preco": 29.90,
+      "preco": 29.9,
       "imagemUrl": "assets/images/capas/pequeno-principe.png"
     }
   ],
-  "usuarios": []
+  "usuarios": [
+    {
+      "id": "8c7d",
+      "nome": "Bernardo",
+      "sobrenome": "Melo",
+      "email": "teste@teste.com",
+      "senha": "123456",
+      "confirmarSenha": "123456",
+      "termos": true
+    },
+    {
+      "id": "1c1b",
+      "nome": "teste",
+      "sobrenome": "tese2",
+      "email": "gf@gf.com",
+      "senha": "123456",
+      "confirmarSenha": "123456",
+      "termos": true
+    },
+    {
+      "id": "994c",
+      "nome": "bhjkl",
+      "sobrenome": "vbnm,",
+      "email": "gh@g.com",
+      "senha": "123456",
+      "confirmarSenha": "123456",
+      "termos": true
+    }
+  ]
 }

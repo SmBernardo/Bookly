@@ -10,23 +10,31 @@
                 Menu
                 <div id="img-divisa"></div>
             </button>
-            <input type="text" id="search" placeholder="pesquisar no catálogo">
-            <button id="button-search">
+
+            <input
+                #inputBusca
+                type="text"
+                id="search"
+                placeholder="pesquisar no catálogo"
+                (keyup.enter)="pesquisarLivros(inputBusca.value)">
+
+            <button id="button-search" (click)="pesquisarLivros(inputBusca.value)">
                 <div id="img-search"></div>
             </button>
         </div>
 
         <div class="button-container">
-            <button id="btn-favoritos">
-                <div id="img-favoritos"></div>
-            </button>
-            <button id="btn-carrinho">
-                <div id="img-carrinho"></div>
-            </button>
-            <button id="btn-conta">
-                <div id="img-conta"></div>
-            </button>
-        </div>
+    <button id="btn-favoritos">
+        <div id="img-favoritos"></div>
+    </button>
+    <button id="btn-carrinho">
+        <div id="img-carrinho"></div>
+    </button>
+
+    <button id="btn-conta" routerLink="/perfil">
+        <div id="img-conta"></div>
+    </button>
+</div>
         <button id="btn-ajuda">
             Acessibilidade
             <span>•</span>
@@ -129,11 +137,24 @@
                         <div class="img-bar" id="menu-3"></div>
                     </div>
                 </div>
-                <div class="bar" style="margin: 0px; width: 170px; padding: 0px 15px; cursor: pointer;">
-                    <div class="img-bar" id="ordenar" style="background: url(assets/images/ordernar-1.png) center/cover;"></div>
-                    Lançamento
-                    <div class="img-bar" id="seta-baixo" style="background: url(assets/images/seta-baixo-2.png) center/cover;"></div>
-                </div>
+                <div class="bar">
+    <button id="menu">
+        <div id="img-cardapio"></div>
+        Menu
+        <div id="img-divisa"></div>
+    </button>
+
+    <input
+        #inputBusca
+        type="text"
+        id="search"
+        placeholder="pesquisar no catálogo"
+        (keyup.enter)="pesquisarLivros(inputBusca.value)">
+
+    <button id="button-search" (click)="pesquisarLivros(inputBusca.value)">
+        <div id="img-search"></div>
+    </button>
+</div>
             </div>
             <div class="right-section-bottom">
                 <div class="book-card" *ngFor="let livro of listaDeLivros">

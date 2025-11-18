@@ -420,3 +420,28 @@ h3 span {
     height: 40px;
     background: url(../../../assets/Images/comprar.png) center/cover;
 }
+
+#btn-conta-home {
+    background-color: #E4DCCF;
+    width: 48px;
+    height: 48px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(206, 206, 206);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#btn-conta-home:hover {
+    background-color: #d3cbbd;
+}
+
+#img-conta {
+    width: 20px;
+    height: 20px;
+    background: url(../../../assets/images/conta.png) center/cover;
+}

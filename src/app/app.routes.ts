@@ -10,6 +10,7 @@ import { LoginComponent } from './pages/login/login';
 import { CadastroComponent } from './pages/cadastro/cadastro';
 import { CatalogoComponent } from './pages/catalogo/catalogo';
 import { ObrigadoComponent } from './pages/obrigado/obrigado';
+import { PerfilComponent } from './pages/perfil/perfil';
 
 export const routes: Routes = [
     // Rota padrão (ex: localhost:4200) vai para a Home
@@ -20,6 +21,7 @@ export const routes: Routes = [
     { path: 'cadastro', component: CadastroComponent },
     { path: 'catalogo', component: CatalogoComponent },
     { path: 'obrigado', component: ObrigadoComponent },
+    { path: 'perfil', component: PerfilComponent },
 
     // (Opcional) Rota "coringa" para redirecionar se a URL não existir
     { path: '**', redirectTo: '', pathMatch: 'full' }
