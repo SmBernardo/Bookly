@@ -16,14 +16,13 @@ export class LivroService {
 
   getLivros(termoBusca?: string): Observable<Livro[]> {
     let url = this.apiUrl;
-
-    // O JSON-Server suporta busca com "?q="
     if (termoBusca && termoBusca.trim() !== '') {
-      url += `?q=${encodeURIComponent(termoBusca)}`;
+      const termoCodificado = encodeURIComponent(termoBusca.trim());
+      url += `?q=${termoCodificado}`;
     }
-
     return this.http.get<Livro[]>(url);
   }
+}
 
   // Mock Data (dados fictícios)
   // private livros: Livro[] = [
@@ -75,7 +74,6 @@ export class LivroService {
   //     livro.titulo.toLowerCase().includes(termoBusca.toLowerCase()) ||
   //     livro.autor.toLowerCase().includes(termoBusca.toLowerCase())
   //   );
-  }
 
   // getLivroById(id: number) { ... }
   // adicionarLivro(livro: Livro) { ... }

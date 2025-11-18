@@ -28,7 +28,12 @@ export class CatalogoComponent implements OnInit {
     this.route.queryParams.subscribe(params => {
       const termoBusca = params['q'];
 
-      this.carregarLivros(termoBusca);
+      this.livroService.getLivros(termoBusca).subscribe(livrosRetornados => {
+        this.listaDeLivros = livrosRetornados;
+        console.log("Livros encontrados:", livrosRetornados.length);
+        console.log("Termo de busca usado:", termoBusca);
+        this.carregarLivros(termoBusca);
+      });
     });
   }
 
